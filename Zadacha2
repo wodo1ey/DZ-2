@@ -1,0 +1,18 @@
+#include "pt4.h"
+#include "cmath"
+using namespace std;
+
+void Solve()
+{
+    Task("TheTwo14");
+    int y = 5, N;
+    float x, z{};
+    pt >> N;
+    while (y <= N)
+    {
+        x = pow ((1. / y), N);
+        y++;
+        z += x;
+    }
+    pt << z;
+}
