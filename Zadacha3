@@ -1,0 +1,27 @@
+#include "pt4.h"
+using namespace std;
+
+void Solve()
+{
+    Task("TheTwo18");
+    int n, x, y, m, i, p;
+    pt >> n;
+    x = n % 10;
+    m = x;
+    i = 1;
+    p = 1;
+    while (n > 10)
+    {
+        x = n % 10;
+        n = n / 10;
+        y = n % 10;
+        i++;
+        if (y <= x)
+            if (m >= y)
+            {
+                m = y;
+                p = i;
+            }
+    }
+    pt << m << p;
+}
