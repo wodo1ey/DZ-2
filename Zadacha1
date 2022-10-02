@@ -1,0 +1,19 @@
+#include "pt4.h"
+using namespace std;
+
+void Solve()
+{
+    Task("TheTwo7");
+    int g = 100, y, n;
+    float kg = 100.0;
+    pt >> n;
+    while (n > 1)
+    {
+        y = g + 50;
+        kg += y;
+        n--;
+        g = y;
+    }
+    kg /= 1000;
+    pt << g << kg;
+}
